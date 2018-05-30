@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="lawtion.dao.IntroduceDAO">
+	<select id ="getResultList" resultType="lawtion.vo.IntroduceVO">
+		select * from (select rownum as rno,no,name,dname,
+					part from (select no,name,dname,part 
+					from lawtion_introduce order by no))
+					where rno between #{param1} and #{param2}
+	</select>
+	<select id="execTotalCount" resultType="int">
+		select count(*) from lawtion_introduce
+	</select>
+	<select id="getResultVO" resultType="lawtion.vo.IntroduceVO">
+		select l.no,name,dname,part,carrer,trial,win,lose 
+					from lawtion_introduce l, introduce_member m
+					where l.no=m.no and l.no=#{no}
+	</select>
+</mapper>

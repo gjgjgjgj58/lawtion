@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="lawtion.dao.PrecedentDAO">
+
+<select id="getSearchList" resultType="lawtion.vo.PrecedentVO">
+	select rno, no, title, content, result, hits
+	 from (select rownum as rno, no, title, content, result, hits
+	 from (select * from precedent_normal where title like '%' || #{param1} || '%' or content like '%' || #{param1} || '%'))
+	 where rno between #{param2} and #{param3}
+</select>
+
+<!--  <select id="getResultList" resultType="lawtion.vo.PrecedentVO">
+	select rownum as rno, no, title, result, hits from precedent_normal
+</select>-->
+
+<select id="getTreeResult" resultType="lawtion.vo.PrecedentVO">
+	select rownum as rno, no , title, result, hits from precedent_normal where result=#{param1}
+</select>
+
+<select id="getTreeScale" resultType="lawtion.vo.PrecedentVO">
+	select rownum as rno, no , title, result, hits from precedent_normal where scale=#{param1}
+</select>
+
+<select id="getTreeCate" resultType="lawtion.vo.PrecedentVO">
+	select rownum as rno, no , title, result, hits from precedent_normal where category=#{param1}
+</select>
+
+<select id="getResultVO" resultType="lawtion.vo.PrecedentVO">
+	select title,content from precedent_normal where no=#{param1}
+</select>
+
+<update id="getUpdateHits">
+	update precedent_normal set hits = hits+1 where no=#{param1}
+</update>
+
+<delete id="getDeleteResult">
+	delete from precedent_search
+</delete>
+
+<select id="execTotalCount" resultType="int">
+	select count(*) from precedent_normal
+</select>
+
+<select id="execTotalCount1" resultType="int">
+	select count(*) from precedent_normal where title like '%' || #{param1} || '%' or content like '%' || #{param1} || '%'
+</select>
+
+<select id="getResultList" resultType="lawtion.vo.PrecedentVO">
+	select rno, no, title, content, result, hits
+	 from (select rownum as rno, no, title, content, result, hits
+	 from (select * from precedent_normal))
+	 where rno between #{param1} and #{param2}
+</select>
+
+</mapper>

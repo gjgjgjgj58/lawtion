@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="lawtion.dao.SearchDAO">
+	<select id="getResultList" resultType="lawtion.vo.SearchVO" >
+		select * from (select rownum as rno, no, name, dname, part from
+      		(select * from lawtion_introduce order by name desc)
+      	     where dname||name like '%' || #{param1} || '%')
+       where rno BETWEEN #{param2} AND #{param3}
+	</select>
+	<select id="execTotalCount" resultType="int">
+		SELECT COUNT(*) FROM LAWTION_INTRODUCE
+	</select>
+	<select id="getLawyerList" resultType="String">
+		SELECT NAME FROM LAWTION_INTRODUCE WHERE NO=#{param1}
+	</select>
+	<select id="getResultAllList" resultType="lawtion.vo.SearchVO">
+		SELECT ROWNUM AS RNO, NO, NAME, DNAME, PART FROM (SELECT ROWNUM AS RNO, NO, NAME, DNAME, PART FROM LAWTION_INTRODUCE ORDER BY NO DESC) WHERE RNO BETWEEN #{param1} AND #{param2}
+	</select>
+
+</mapper>

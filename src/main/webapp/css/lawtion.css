@@ -1,0 +1,2383 @@
+/* header style sheet*/
+/* header style
+selector(선택자) { property:value; ...... }
+선택자 종류: html 태그 (element(브라우저에서 해석이 되면 브라우저의 요소?)), html의 태그가 똑같을 때 클래스를 사용, id
+종속관계1(부모 자손 ...), 종속관계2(부모>자식>...) <- 종속관계를 고려한 사용 방법
+*/
+
+   body{width:100%; margin:0px;/*기본적인 여백을 지우기 위한 설정*/}
+   header {height:150px; border:1px solid #f9f9f9;}
+   header section.menu {width:100%; height:79px;}
+   header>div /*>는 직속관계를 나타냄*/ {
+      margin:auto;
+      /*border:3px solid blue;*/
+      position:relative;
+      width:100%;
+      height:50px;
+   }
+    header a {text-decoration:none;}
+   header nav.header-nav1 ul li, nav.header-nav2 ul li {
+      display:inline;
+   }
+   
+   header nav.header-nav1 {
+      text-align:right; /* display 속성이 inline일 때만 사용 가능한 기능 */
+      margin:auto;
+      /*border:3px solid blue;*/
+      background:#f9f9f9;
+      height:40px;
+   }
+   header nav.header-nav2 {
+      text-align:center;
+      margin:auto;
+      position:relative;
+      top:-80px;
+      /*border:3px solid blue;*/
+   }
+   header nav.header-nav1 ul{
+   margin-left:1150px;
+   width:500px;
+   height:auto;
+   padding-top:10px;
+   
+   }
+   
+   
+   header nav.header-nav1 ul li a {
+      /*padding:top right bottom left*/
+      padding:0px 10px 0px 10px;
+      font-size:9pt;
+      font-weight:bold;
+      color:gray;
+      border-right:1px solid gray;
+   }
+  
+   header nav.header-nav2 ul{
+   display:inline-block;
+   }
+   
+   header nav.header-nav2 ul:nth-child(1){
+   margin-left:-60px;
+   margin-top:10px;
+   }
+   
+   header nav.header-nav2 ul:nth-child(1) li{
+   padding-left:20px;
+   
+   }
+   
+   header nav.header-nav2 ul:nth-child(2){
+   margin-left:400px;
+   }
+   
+   header nav.header-nav2 ul:nth-child(2) li{
+   padding-left:20px;
+   
+   }
+   
+   
+   /* header 메뉴부분 추가 */
+   div.header3 nav.header-nav1 ul{
+   margin-left:1150px;
+   width:500px;
+   height:auto;
+   padding-top:15px;
+   
+   }
+   
+   header div.header3 nav.header-nav2 {
+     text-align:center;
+     margin:auto;
+     position:relative;
+     top:-80px;
+     /*border:3px solid blue;*/
+  }
+  
+   header div.header3 nav.header-nav2 ul{
+   display:inline-block;
+   }
+   
+   header div.header3 nav.header-nav2 ul:nth-child(1){
+   margin-left:-30px;
+   margin-top:10px;
+   }
+   
+   header div.header3 nav.header-nav2 ul:nth-child(1) li{
+   padding-left:-20px;
+   
+   }
+   
+   header div.header3 nav.header-nav2 ul:nth-child(2){
+   margin-left:440px;
+   }
+   
+   header div.header3 nav.header-nav2 ul:nth-child(2) li{
+   padding-left:20px;
+   }
+   
+   /* header logo */
+   
+   header div.logo{
+   display:inline-block;
+   margin:auto;
+   margin-left:200px;
+   width:1480px;
+   margin-top:-10px;
+   }
+   
+   header div.logo img{
+   margin:auto;
+   display:inline-block;
+   margin:auto;
+   margin-left:620px;
+   margin-top:20px;
+   }
+   
+   /*header1.jsp*/
+   
+   header {height:150px; border:1px solid #f9f9f9;}
+   div.header1 { margin-top:-20px; }
+   header section.menu {width:100%; height:79px;}
+   header>div /*>는 직속관계를 나타냄*/ {
+      margin:auto;
+      /*border:3px solid blue;*/
+      position:relative;
+      width:100%;
+      height:50px;
+   }
+    header a {text-decoration:none;}
+   header nav.header-nav1 ul li, nav.header-nav2 ul li {
+      display:inline;
+   }
+   
+   div.header1 nav.header-nav1 {
+      text-align:right; /* display 속성이 inline일 때만 사용 가능한 기능 */
+      margin:auto;
+      /*border:3px solid blue;*/
+      background:#f9f9f9;
+      height:43px;
+   }
+   header nav.header-nav2 {
+      text-align:center;
+      margin:auto;
+      position:relative;
+      top:-80px;
+      /*border:3px solid blue;*/
+   }
+   div.header1 nav.header-nav1 ul{
+   margin-left:1110px;
+   width:500px;
+   height:auto;
+   padding-top:15spx;
+   
+   }
+   
+   
+   header nav.header-nav1 ul li a {
+      /*padding:top right bottom left*/
+      padding:0px 10px 0px 10px;
+      font-size:9pt;
+      font-weight:bold;
+      color:gray;
+      border-right:1px solid gray;
+   }
+  
+   header nav.header-nav2 ul{
+   display:inline-block;
+   }
+   
+   header nav.header-nav2 ul:nth-child(1){
+   margin-left:-60px;
+   margin-top:10px;
+   }
+   
+   header nav.header-nav2 ul:nth-child(1) li{
+   padding-left:20px;
+   
+   }
+   
+   header nav.header-nav2 ul:nth-child(2){
+   margin-left:400px;
+   }
+   
+   header nav.header-nav2 ul:nth-child(2) li{
+   padding-left:20px;
+   
+   }
+   
+   
+   header div.logo{
+   display:inline-block;
+   margin:auto;
+   margin-left:200px;
+   width:1480px;
+   margin-top:-10px;
+   }
+   
+   header div.logo img{
+   margin:auto;
+   display:inline-block;
+   margin:auto;
+   margin-left:620px;
+   margin-top:20px;
+   }
+   
+   
+   
+   /* footer */
+   body footer {
+		margin:auto;
+		text-align:center;	
+		background-color:white;	
+	}
+	
+	footer div.div1 select{
+		width:250px;
+		height:30px;
+
+	}
+	
+	footer div.div2 ul li {
+		display:inline;
+	}
+	
+	footer div.div2 ul li a {
+		text-decoration:none;
+	    color:rgb(63,63,61);
+	    font-size:10pt;
+	    font-weight:bold;
+	    padding:0px 15px 0px 5px;
+	    margin-top:5px;
+	}
+	
+	footer div.div2 ul li:nth-child(3) a {
+		color:rgb(102,51,0);
+	}
+	
+	footer div.div2 {
+		width:1454px;
+		heigth:85px;
+		background:url("http://localhost:9000/lawtion/images/footer1.jpg") no-repeat;
+		margin:auto;
+	}
+	
+	footer div.div4 {
+		display:inline-block;
+		padding-top:6px;
+		font-size:9pt;
+		margin-left:20px;
+		padding-left:10px;
+	}
+	
+	footer hr.hr1 {
+		margin-bottom:-2px;
+	}
+	
+	footer hr.hr2 {
+		margin-top:-1px;
+	}
+	
+	
+	
+/* index style sheet*/
+
+
+body { background-size:cover;}
+ 
+div.content{
+	width:1400px; margin:auto;
+	}
+
+body div section.section1{
+	width:100%; text-align:center;
+	
+
+	}
+
+
+
+/*end of carousel */
+
+
+/*index 하단 게시판 관련*/
+body section.section2 {
+	width:1430px; height:600px; 
+	margin:auto; margin-top:50px;
+	margin-left:-15px;
+}
+
+section.section2-1{
+	width:100%;
+	height:45%;
+}
+
+section.section2 div.main-lawtalk {
+		border-right:solid 1px lightgray;
+		width:700px;
+		height:100%;
+		display:inline-block;
+		float:left;
+		margin-left:13px;
+		
+}
+section.section2 div.main-reviewboard {
+		width:700px;
+		height:100%;
+		display:inline-block;
+}
+
+section.section2-1 div.main-lawtalk span{
+	width:100%; height:50px;
+	display:inline-block;
+	background:url("http://localhost:9000/lawtion/images/maintitle.gif") no-repeat;
+	margin-top:5px;
+}
+section.section2-1 div.main-reviewboard span {
+	width:100%; height:50px;
+	display:inline-block;
+	background:url("http://localhost:9000/lawtion/images/maintitle2.gif") no-repeat;
+	margin-top:5px;
+	margin-left:60px;
+}
+
+section.section2-1 div.main-lawtalk table.main1 {
+	width:90%;
+	height:200px;
+}
+
+div.main-lawtalk table.main1 tr{
+	border-bottom:dotted lightgray 1px;
+}
+
+
+div.main-lawtalk table.main1 tr td:nth-child(1){
+	width:15%;
+	text-align:center;
+	background:url("http://localhost:9000/lawtion/images/button1.gif") no-repeat;
+	color : white;
+	font-size:12pt;
+	font-weight:bold;
+}
+div.main-lawtalk table.main1 tr td:nth-child(2){
+	padding-left:10px;
+	color:#9f9f9f;
+}
+div.main-lawtalk table.main1 tr td:nth-child(3){
+	width:15%;
+	text-align:center;
+	padding-top:14px;
+	color:#707070;
+	font-size:10pt;
+}
+
+div.main-lawtalk table.main1 tr td:nth-child(2) a{
+	color:#707070;
+	text-decoration:none;
+}
+
+
+section.section2-1 div.main-reviewboard table.main2 {
+	width:90%;
+	height:205px;
+	margin-left:60px;
+}
+
+div.main-reviewboard table.main2 tr{
+	border-bottom:solid 4px white;
+	background-color:#f9f9f9;
+}
+
+
+div.main-reviewboard table.main2 tr td:nth-child(1){
+	width:20%;
+	text-align:center;
+	color : white;
+	font-size:12pt;
+	font-weight:bold;
+	padding-left:20px;
+	background:url("http://localhost:9000/lawtion/images/actiontitle1.gif") no-repeat;
+}
+div.main-reviewboard table.main2 tr:nth-child(2) td:nth-child(1),
+div.main-reviewboard table.main2 tr:nth-child(3) td:nth-child(1){
+	background:url("http://localhost:9000/lawtion/images/actiontitle1.gif") no-repeat;
+}
+
+div.main-reviewboard table.main2 tr td:nth-child(2){
+	padding-left:10px;
+	color:#9f9f9f;
+}
+div.main-reviewboard table.main2 tr td:nth-child(3){
+	width:15%;
+	text-align:center;
+	padding-top:14px;
+	color:#707070;
+	font-size:10pt;
+}
+
+ div.main-reviewboard table.main2 tr td:nth-child(2) a{
+	color:#707070;
+	text-decoration:none;
+}
+
+section.section2-2 {
+	width:100%;
+	height:auto;
+	margin-top:40px;
+}
+
+section.section2-2 div.mainbox1{
+	width:265px; height:250px;
+	display:inline-block;
+	margin-left:12px;
+	
+}
+
+section.section2-2 div.mainbox2{
+	width:265px; height:250px;
+	display:inline-block;
+	margin-left:12px;
+}
+
+section.section2-2 div.mainbox3{
+	width:265px; height:250px;
+	display:inline-block;
+	margin-left:12px;
+}
+
+section.section2-2 div.mainbox4{
+	width:265px; height:250px;
+	display:inline-block;
+	margin-left:12px;
+}
+
+section.section2-2 div.mainbox5{
+	width:265px; height:250px;
+	display:inline-block;
+	margin-left:12px;
+}
+
+
+
+
+
+
+
+
+
+/* 변호사 리스트 */
+body div.introduce{
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+	font-family: 'Nanum Myeongjo', serif;
+	
+}
+
+
+body div.introduce section.content_style{
+	background-color:white; background-size:cover;
+	width:100%; 
+}
+body div.introduce section.content_style div.direction{
+	width:300px; height:50px;
+	border-left:15px solid gray;
+	border-bottom:2px solid gray;
+	font-size:20px;
+	color:rgb(63,63,61);
+	padding:10px 0px 3px 30px;
+	margin:50px 0px 100px 500px;
+
+}
+
+
+/* 검색 창 */
+
+div.introduce section.content_style div.pull-right{
+	/*background: white;*/
+	padding-right:30px;
+	margin-right:500px;
+	
+	
+}
+div.introduce section.content_style div.pull-right:after{
+	content:""; 
+	clear:both; 
+	display:table;
+}
+
+div.introduce section.content_style div.pull-right input {
+  margin-top:10px;
+  margin-left:0px;
+  width: 200px;
+  height: 42px;
+  padding-left: 15px;
+  border-radius: 42px;
+  border: 2px solid #b9dcff;
+  background: #b9dcff;
+  outline: none;
+  font-weight:100px;
+  transition: .3s linear;
+ 
+}
+div.introduce section.content_style div.pull-right input:focus {
+  width: 250px;
+}
+
+div.introduce section.content_style table.results {
+	align:center;
+	width:960px;
+	margin:65px 0px 0px 500px;
+	padding-top:200px;
+	padding-left:500px;
+}
+div.introduce section.content_style table.results tr:nth-child(9) td{
+	border-bottom:1px solid white;
+	border-left:1px solid white;
+	border-right:1px solid white;
+}
+div.introduce section.content_style table.results tr[visible='false'],
+no-result{
+	display:none;
+}
+div.introduce section.content_style table.results tr[visible='true']{
+	display:table-row;
+}
+
+div.introduce section.content_style table.results thead{
+	padding:10px;
+	vertical-align:top;
+	color:#369;
+	border-bottom: 3px solid #036;
+	font-weight:bold;
+	font-size:150%;
+}
+div.introduce section.content_style table.results tbody th{ 
+	width:150px;
+	font-weight:bold;
+	vertical-align:top;
+	border-bottom:1px solid #ccc;
+	padding:40px;
+	background:#f3f6f7;
+	font-size:130%;
+}
+div.introduce section.content_style table.results td{
+	width:350px;
+	padding:10px;
+	vertical-align:center;
+	border-bottom:1px solid #ccc;
+	font-size:130%;
+
+}
+div.introduce section.content_style table.results tr td.profile img {
+	width:20%;
+	height:30%;
+	margin:5px;
+}
+
+
+
+
+
+/*변호사 상세 페이지 left-iframe 검색과 리스트 부분 */
+
+div.introduce section.content_style2{
+	 background-color:white; background-size:cover; 
+	 font-family: 'Nanum Myeongjo', serif;
+}
+
+
+div.introduce section.content_style2 div.left-iframe div.pull-right{
+	padding-right:30px;
+	margin-left:40px;
+}
+div.introduce section.content_style2 div.left-iframe div.pull-right:after{
+	content:""; 
+	clear:both; 
+	display:table;
+}
+
+div.introduce section.content_style2 div.left-iframe div.pull-right input {
+  width: 200px;
+  height: 42px;
+  padding-left: 15px;
+  border-radius: 42px;
+  border: 2px solid #b9dcff;
+  background: #b9dcff;
+  outline: none;
+  transition: .3s linear;
+
+}
+div.introduce section.content_style2 div.left-iframe div.pull-right input:focus {
+  width: 300px;
+}
+
+div.introduce section.content_style2 div.left-iframe table.results2 tr[visible='false'],
+no-result{
+	display:none;
+}
+div.introduce section.content_style2 div.left-iframe table.results2 tr[visible='true']{
+	display:table-row;
+}
+div.introduce section.content_style2 div.left-iframe table.result2{
+	border:1px solid black;
+	padding-left:200px;
+	
+}
+div.introduce section.content_style2 div.left-iframe{
+	height:100%;
+	overflow:auto;
+	
+	margin-left:-40px;
+	width:100%;
+
+}
+
+div.introduce section.content_style2 div.left-iframe table.results2 td img{
+	width:30%;
+	height:30%;
+}
+
+
+
+/* 변호사 상세 페이지  iframe 통합 위치 !*/
+
+
+body div.introduce2 section.content_style div.direction{
+	width:450px; height:50px;
+	border-left:15px solid gray;
+	border-bottom:2px solid gray;
+	font-size:20px;
+	color:rgb(63,63,61);
+	padding:10px 0px 3px 30px;
+	margin:0px 0px 100px 500px;
+}
+
+div.introduce2 section.content_style{
+	font-family: 'Nanum Myeongjo', serif;
+}
+div.introduce2 section.content_style div.left-list{
+	height:100%;
+	width:25%;
+	padding-left:100px;
+	padding-right:-600px;
+	margin-left:80px;
+	float:left;
+}
+
+div.introduce2 section.content_style2 div.right-iframe{
+	height:100%;
+	overflow:auto;
+	width:100%;
+
+}
+
+/* 오른쪽 상세부분  right-iframe*/
+
+div.introduce3 section.content_style{
+	background-color:white;background-size:cover;  
+	font-family: 'Nanum Myeongjo', serif;
+
+}
+div.introduce3 section.content_style div.right-content{
+	width:100%;
+}
+div.introduce3 section.content_style div.right-content hr{
+	border:2px solid black;
+}
+div.introduce3 section.content_style div.right-content div.right-img img{
+	width:100%;
+	height:200px;
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail{
+	height:384px;
+	width:100%;
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career{
+	height:380px;
+	width:100%;
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career tr td.profile{
+	padding-left:100px;
+	width:40%;
+	margin:auto;
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career tr td.profile img{
+	width:280px; height:320px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet{
+	padding-right:50px;
+	margin-left:70px;
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet hr{
+	border:solid 1px black;
+	width:100%;
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet div.dnameGG{
+	font-size:16px;
+	text-align:left;
+	font-weight:bold;
+}
+
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet div.nameGG{
+	
+	font-size:33px;
+	font-weight:bold;
+	text-align:right;
+	font-family:'210 나무고딕 B';
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet span.aaa{
+	font-size:16px;
+	font-weight:bold;
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet div.nameGG-2{
+	
+	font-size:17px;
+	font-weight:bold;
+	text-align:right;
+	font-family:'210 나무고딕 B';
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet div.detailGG{
+	font-size:15px;
+	text-align:left;
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career tr td.trialSet{
+	text-align:center;
+	width:100px;
+	height:200px;
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career tr td.trialSet hr{
+	border:1px solid gray;
+}
+div.introduce3 section.content_style div.right-content div.lawyer-detail table.career tr td.trialSet span.trial,span.win,span.lose{
+	font-weight:bold;
+	font-size:18px;
+}
+/* in 변호사 상세 페이지,  개인 변호사 경력사항 출력 */
+
+
+div.introduce2 section.content_style{
+	background-color:white;background-size:cover; width:100%; 
+
+}
+
+div.introduce2 section.content_style div.direction{
+	width:500px; height:50px;
+	border-left:15px solid gray;
+	border-bottom:2px solid gray;
+	font-size:20px;
+	color:rgb(63,63,61);
+	padding:0px 0px 3px 30px;
+	margin:50px 0px 100px 500px;
+}
+
+div.introduce2 section.content_style div.right-content{
+	
+	padding-right:200px;
+	margin-right:200px;
+	width:58%;
+	float:right;
+}
+/*
+div.introduce2 section.content_style div.right-content hr{
+	border:2px solid black;
+}
+div.introduce2 section.content_style div.right-content div.right-img img{
+	width:100%;
+	height:200px;
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail{
+	height:380px;
+	width:100%;
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career{
+	height:380px;
+	width:100%;
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career tr td.profile{
+	padding-left:100px;
+	width:40%;
+	margin:auto;
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career tr td.profile img{
+	width:280px; height:320px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet{
+	padding-right:50px;
+	margin-left:70px;
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet hr{
+	border:solid 1px black;
+	width:100%;
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet div.dnameGG{
+	font-size:16px;
+	text-align:left;
+	font-weight:bold;
+}
+
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet div.nameGG{
+	
+	font-size:33px;
+	font-weight:bold;
+	text-align:right;
+	font-family:'210 나무고딕 B';
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet span.aaa{
+	font-size:16px;
+	font-weight:bold;
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet div.nameGG-2{
+	
+	font-size:17px;
+	font-weight:bold;
+	text-align:right;
+	font-family:'210 나무고딕 B';
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career tr td.nameSet div.detailGG{
+	font-size:15px;
+	text-align:left;
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career tr td.trialSet{
+	text-align:center;
+	width:100px;
+	height:200px;
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career tr td.trialSet hr{
+	border:1px solid gray;
+}
+div.introduce2 section.content_style div.right-content div.lawyer-detail table.career tr td.trialSet span.trial,span.win,span.lose{
+	font-weight:bold;
+	font-size:18px;
+}*/
+
+/*Review_Board*/
+div.review {
+	width: 100%;
+	height: auto;
+	background-color: white;
+	padding-bottom: 40px;
+}
+
+div.review-title {
+	display: inline-block;
+	background:#063454;
+	height:150px;
+	width:100%;
+	color:white;
+}
+div.title-sub{
+	width:510px;
+	height:150px;
+	margin:auto;
+}
+
+div.title-sub img{
+	margin-top:30px;
+}
+
+div.review-title1 {
+	display: inline-block;
+	background:#063454;
+	height:150px;
+	width:100%;
+	color:white;
+	margin-top:20px;
+}
+div.review-title1 div.title-sub{
+	width:510px;
+	height:150px;
+	margin:auto;
+}
+
+div.review-title1 div.title-sub img{
+	margin-top:30px;
+}
+div.review nav.review-select {
+	width: 100%;
+	height: 83px;
+	display: inline-block;
+	border: 1px solid lightgray;
+	margin-bottom: 50px;
+}
+
+div.review div.select {
+	width: 63%;
+	height: 82px;
+	display: block;
+	margin: auto;
+}
+
+nav.review-select ul li {
+	float: left;
+	color: black;
+	line-height: 80px;
+	vertical-align: middle;
+	text-align: center;
+	margin-top: -16px;
+	width: 33%;
+	border-right: 1px solid lightgray;
+	list-style: none;
+}
+
+nav.review-select ul li:first-child {
+	border-left: 1px solid lightgray;
+}
+
+nav.review-select ul li.select1 {
+	border-bottom: 6px solid #474747;
+}
+
+nav.review-select ul li.select2 {
+	color: lightgray;
+}
+
+nav.review-select ul li.select1 a {
+	display: block;
+	text-decoration: none;
+	color: #474747;
+	font-weight: bold;
+	font-size: 13pt;
+}
+
+nav.review-select ul li.select2 a {
+	display: block;
+	text-decoration: none;
+	color: #8c8c8c;
+	font-weight: bold;
+	font-size: 13pt;
+}
+
+nav.review-select ul li.select2 a:hover {
+	color: #474747;
+	border-bottom: 6px solid #474747;
+}
+
+div.review-allbest {
+	border: 1px solid gray;
+	width: 50%;
+	margin: auto;
+	diplay: inline-block;
+	font-weight: bold;
+}
+
+div.review-allbest table.best {
+	margin: auto;
+	diplay: inline-block;
+	width: 90%;
+	margin-top: -20px;
+	margin-bottom: 10px;
+}
+
+div.review-allbest table.best tr td {
+	padding: 7px;
+	font-weight: bold;
+}
+
+div.review-allbest table.best tr:nth-child(1) {
+	color: red;
+}
+
+div.review-allbest table.best tr td:nth-child(1) {
+	width: 15%;
+	text-align: center;
+}
+
+div.review-allbest span {
+	font-size: 13pt;
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	left: 430px;
+	background-color: white;
+	padding: 10px;
+	color: red;
+}
+
+div.reviewlist {
+	margin-top: 30px;
+}
+
+div.write-btn {
+	position: relative;
+	display: inline-block;
+	left: 1420px;
+}
+
+div.review button {
+	width: 100px;
+	background-color: #e6e6e6;
+	border: none;
+	color: black;
+	padding: 10px 0;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 4px;
+	cursor: pointer;
+}
+
+div.reviewlist table.all {
+	width: 60%;
+	text-align: center;
+	diplay: inline-block;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 200px;
+}
+
+div.reviewlist table.all tr td,div.reviewlist table.all tr th {
+	padding: 7px;
+	border-bottom: 1px lightgray solid;
+}
+
+div.reviewlist table.all tr:last-child td {
+	border-bottom: 1px solid white;
+}
+
+div.reviewlist table.all tr:nth-child(1) {
+	border-top: 4px solid #474747;
+	border-bottom: 4px solid #474747;
+}
+
+/*Review write*/
+div.write-title {
+	margin-left: 450px;
+	margin-bottom: 10px;
+	width: 53%;
+	font-size: 13pt;
+	padding-bottom: 20px;
+	border-bottom: 1px solid lightgray;
+}
+
+div.write-title img {
+	margin-left: 10px;
+}
+
+div.write table.review-Write {
+	font-size: 11pt;
+	margin: auto;
+	width: 43%;
+	margin-bottom: 20px;
+}
+
+div.write table.review-Write tr:nth-child(1),div.write table.review-Write tr:nth-child(2),div.write table.review-Write tr:nth-child(3),div.write table.review-Write tr:nth-child(5)
+	{
+	height: 50px;
+}
+
+div.write table.review-Write tr td:nth-child(1) {
+	width: 31%;
+}
+
+div.write table.review-Write tr td:nth-child(3) {
+	width: 35%;
+}
+
+div.write table.review-Write tr td:nth-child(2) {
+	width: 32%;
+}
+
+div.write table.review-Write label {
+	margin-left: 25px;
+	display: inline-block;
+}
+
+div.write table.review-Write tr:nth-child(4) label {
+	float: left;
+	margin-top: 30px;
+	padding-right: 45px;
+}
+
+table.review-Write img {
+	position: relative;
+	left: -32px;
+	top: -2px;
+	border: 1px solid lightgray;
+}
+
+table.review-Write tr:nth-child(1) input {
+	margin-left: 30px;
+	width: 120px;
+}
+
+table.review-Write tr:nth-child(2) input {
+	margin-left: 45px;
+	width: 690px;
+}
+
+table.review-Write tr:nth-child(3) input {
+	margin-left: 30px;
+	width: 690px;
+}
+
+table.review-Write tr:nth-child(5) input {
+	margin-left: 12px;
+}
+
+table.review-Write select {
+	margin-left: 20px;
+}
+
+table.review-Write div.write_button {
+	width: 41%;
+	margin: auto;
+}
+
+table.review-Write textarea.content {
+	width: 690px;
+	height: 500px;
+}
+
+/* talk_write */
+div.write-title img {
+	margin-left: 10px;
+}
+
+div.write table.talk-Write {
+	font-size: 11pt;
+	margin: auto;
+	width: 43%;
+	margin-bottom: 20px;
+}
+
+div.write table.talk-Write tr:nth-child(1),div.write table.talk-Write tr:nth-child(2),div.write table.talk-Write tr:nth-child(4)
+	{
+	height: 50px;
+}
+
+div.write table.talk-Write tr:nth-child(3) {
+	width: 20%;
+}
+
+div.write table.talk-Write tr td:nth-child(1) {
+	width: 35%;
+}
+
+div.write table.talk-Write tr td:nth-child(3) {
+	width: 33%;
+}
+
+div.write table.talk-Write tr td:nth-child(2) {
+	width: 32%;
+}
+
+div.write table.talk-Write label {
+	margin-left: 25px;
+	display: inline-block;
+}
+
+div.write table.talk-Write tr:nth-child(3) label {
+	float: left;
+	margin-top: 30px;
+	padding-right: 45px;
+}
+
+table.talk-Write img {
+	position: relative;
+	left: -32px;
+	top: -2px;
+	border: 1px solid lightgray;
+}
+
+table.talk-Write tr:nth-child(1) input {
+	margin-left: 30px;
+	width: 120px;
+}
+
+table.talk-Write tr:nth-child(2) input {
+	margin-left: 45px;
+	width: 690px;
+}
+
+table.talk-Write tr:nth-child(4) input {
+	margin-left: 12px;
+}
+
+table.talk-Write select {
+	margin-left: 20px;
+}
+
+table.talk-Write div.write_button {
+	width: 41%;
+	margin: auto;
+}
+
+table.talk-Write textarea.content {
+	width: 690px;
+	height: 500px;
+}
+
+/*변호사 검색 팝업*/
+body div.lawyersearchContent {
+	width: 100%;
+	height: 650px;
+	background-color: #ECECEC;
+}
+
+table.searchinput {
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid black;
+	background-color: white;
+}
+
+table.searchinput tr td:nth-child(1) {
+	width: 80%;
+	height: 60px;
+}
+
+table.searchinput tr td:nth-child(1) input {
+	color: gray;
+	width: 100%;
+	height: 100%;
+	border: 1px solid white;
+}
+
+table.searchinput tr td:nth-child(2),table.searchinput tr td:nth-child(3)
+	{
+	width: 10%;
+	height: 50px;
+	margin-top:
+}
+
+table.searchinput tr td:nth-child(2) button,table.searchinput tr td:nth-child(3) button
+	{
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	border: 0px solid white;
+}
+
+div.searchnotice {
+	font-size: 8pt;
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	border-bottom: 1px solid black;
+	text-align: center;
+	color: gray;
+}
+
+div.lawyersearchContent div.searchtext {
+	margin: auto;
+	margin-top: 10px;
+	width: 380px;
+	background-color: #ffffff;
+	padding-bottom: 20px;
+}
+
+div.searchtext table {
+	width: 90%;
+	margin: auto;
+	border-bottom: 2px solid #E0E0E0;
+}
+
+div.searchtext table tr:nth-child(2) td:nth-child(2) {
+	border-bottom: 1px solid #E0E0E0;
+	width: 70%;
+	height: 40px;
+	padding-left: 7px;
+}
+
+div.searchtext table tr:nth-child(3) td {
+	width: 70%;
+	height: 40px;
+	font-size: 10pt;
+	padding-left: 7px;
+}
+
+div.searchtext table tr:nth-child(4) td {
+	width: 70%;
+	height: 25px;
+	padding-left: 7px;
+}
+
+div.searchtext table tr:nth-child(1) td {
+	height: 15px;
+	border-bottom: 2px solid #E0E0E0;
+}
+
+div.searchtext table span.searchcontent1 {
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+div.searchtext table span.searchcontent2 {
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+div.searchtext table span.lawyeraddress {
+	font-size: 8pt;
+}
+
+div.searchtext table tr td img {
+	width: 100px;
+	height: auto;
+	float: right;
+}
+
+div.pagenumber {
+	text-align: center;
+	padding-top: 10px;
+}
+div.ampaginationsm{
+	margin:auto;
+	margin-left:100px;
+}
+
+
+
+/*talk_board_list 하소연 게시판 목록*/
+div.talknotice {
+	height: 83px;
+	border: 1px solid lightgray;
+	weight: 100%;
+	margin-bottom: 50px;
+}
+
+div.talknotice label.talktitle {
+	text-align: center;
+	width: 100%;
+	height: 50pt;
+	font-size: 10pt;
+	margin-top: 8px;
+}
+
+/*review_board_content*/
+div.review-content ul {
+	list-style: none;
+	width: 300px;
+	height: 27px;
+	margin-left: 1200px;
+	margin-top: -15px;
+}
+
+div.review-content ul li {
+	list-style: none;
+	float: left;
+	font-size: 10pt;
+	padding-left: 20px;
+}
+
+div.review-content ul li a {
+	text-decoration: none;
+	color: black;
+}
+
+div.review-content table.content {
+	width: 53%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+div.review-content table.content tr:nth-child(1) {
+	height: 70px;
+	font-size: 17pt;
+	border-top: 3px #474747 solid;
+}
+
+div.review-content table.content tr:nth-child(1) td {
+	padding-left: 40px;
+	padding-top: 20px;
+}
+
+div.review-content table.content tr:nth-child(2) {
+	height: 25px;
+	font-size: 10pt;
+	padding-left: 20px;
+	border-bottom: 1px #474747 solid;
+	text-align: center;
+	background-color: rgb(245, 245, 245);
+}
+
+div.review-content table.content tr:nth-child(3) {
+	border-bottom: 3px #474747 solid;
+}
+
+div.review-content table.content tr:nth-child(3) td {
+	padding-top: 20px;
+}
+
+div.review-content table.content tr:nth-child(2) td:nth-child(2) {
+	width: 46%;
+}
+
+div.review-content table.content tr:nth-child(2) td:nth-child(3),div.review-content table.content tr:nth-child(2) td:nth-child(4),div.review-content table.content tr:nth-child(2) td:nth-child(5),div.review-content table.content tr:nth-child(2) td:nth-child(6),div.review-content table.content tr:nth-child(2) td:nth-child(7)
+	{
+	width: 8%;
+	padding-bottom: 7px;
+}
+
+div.review-content table.content tr:nth-child(2) td:nth-child(1),div.review-content table.content tr:nth-child(2) td:nth-child(8)
+	{
+	width: 3%;
+}
+
+div.review-content table.content tr:nth-child(3) td:nth-child(2) {
+	padding-bottom: 20px;
+}
+
+div.review-content table.replywrite {
+	width: 53%;
+	margin: auto;
+	height: 80px;
+	border-top: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+div.review-content table.replywrite tr td:nth-child(1) {
+	width: 15%;
+	text-align: center;
+	font-size: 10pt;
+}
+
+div.review-content table.replywrite tr td:nth-child(3) {
+	width: 15%;
+	background-color: #e6e6e6;
+}
+
+div.review-content table.replywrite textarea {
+	width: 100%;
+	border: 1px solid white;
+	height: 80px;
+}
+
+div.review-content table.replywrite button {
+	width: 98%;
+	height: 100%;
+}
+
+form.talk_replyform table.replywrite div.reply-write-content {
+	height: 100%;
+}
+
+div.review-content table.replylist {
+	width: 53%;
+	margin: auto;
+	margin-bottom: 50px;
+	font-size: 10pt;
+}
+
+div.review-content table.replylist tr td {
+	height: 80px;
+}
+
+div.review-content table.replylist tr {
+	border-bottom: 1px solid #e6e6e6;
+}
+
+div.review-content table.replylist button {
+	width: 50px;
+	height: 40px;
+}
+
+div.review-content table.replylist tr td:nth-child(1) {
+	padding-left: 20px;
+}
+
+div.review-content table.replylist tr td:nth-child(2),div.review-content table.replylist tr td:nth-child(3)
+	{
+	border-bottom: 1px solid #e6e6e6;
+}
+
+table.replylist tr td:nth-child(1) {width:70%; height:auto;}
+table.replylist tr td:nth-child(2) {width:15%; height:auto;}
+table.replylist tr td:nth-child(3) {width:15%; height:auto;}
+
+/* 판례게시판 */
+/* 판례목록*/
+	.whereru {
+		margin-bottom:-50px;
+		padding-left:60px;
+	}
+	.whereru ul {
+		padding-left:50px;
+	}
+	.whereru ul li{
+		display:inline;
+	}
+	
+	.whereru ul li a {
+		text-decoration:none;
+	}
+	body div.precedent {
+		background-color:white;
+	}
+	
+	div.gogo {
+		margin:auto;
+		text-align:center;
+		padding-top:50px;
+		padding-bottom:10px;
+	}
+	
+	div.gogo input {
+		width:250px;
+		height:30px;
+		border:3px solid rgb(137,137,137);	
+	}
+	
+	div.gogo img {
+		width:39px;
+		position:relative;
+		top:15px;
+		left:-6px;
+	}
+	
+	table tr a {
+		text-decoration:none;
+		color:black;
+	}
+	
+	table.table1{
+		border-collapse:collapse;
+		margin:auto;
+		width:90%;
+		border-bottom:3px solid #ddd;
+	}
+	
+	table tr td.category {
+		width:200px;
+		height:400px;
+		text-align:left;
+		vertical-align:top;
+		border-right:1px solid #ddd;
+		border-bottom:3px solid #ddd;
+	}
+	
+	table tr td.category ul li.tree_li {
+		margin-left:-40px;
+	}
+	
+	table tr td.category ul {
+		padding-bottom:7px;
+	}
+	
+	ul { list-style:none; }
+	
+	table tr td button.gobtn2 {
+		margin-left:-6px;
+	}
+	
+	table th{
+		margin:auto;
+		border-top:3px solid rgb(73,73,73);
+		border-bottom:3px solid rgb(73,73,73);
+		color:black;
+	}
+		
+	table th, table.table1 td
+	{	
+		padding:15px; text-align:center;
+	}
+	
+	table.table1 td{
+		border-bottom:1px solid #ddd;
+	}
+	
+	table.table1 td:nth-child(1) {
+		padding:0px;
+	}
+	
+	table.table1 tr:nth-child(1) td {
+		text-align:left;
+	}
+	
+	div.gzua {
+		margin-top:50px;
+		margin-bottom:60px;
+	}
+	
+	table.table2 {
+		margin:auto;
+		text-align:center;
+	}
+	
+	table.table2 tr td li {
+		display:inline;
+	}
+	
+	table.table2 tr td li a {
+		padding:4px;
+		margin-right:3px;
+		width:15px;
+		color:#000;
+		font:bold 12px tahoma;
+		border:1px solid #eee;
+		text-align:center;
+	}
+	
+    /* fontello 아이콘과 tree의 간격 조절 */
+    .tree *:before {
+        width:17px;
+        height:20px;
+        display:inline-block;
+    }
+
+    /* 해당 영역을 닫을경우, 혹은 닫혀있는경우 사용할 이미지를 지정한다. */
+    .tree input[type="checkbox"]:checked+label:before {
+        content:"\f196";
+        font-family:fontello;
+    }
+
+    /* 해당 영역을 오픈 하였을때 변경할 이미지를 지정한다. */
+    .tree label:before {
+        content:"\f196";
+        font-family:fontello;
+    }
+
+    /* a태그로 지정한 더이상 오픈할 것이 없고 해당 페이지를 불러올때 사용될 이미지를 지정한다. */
+    .tree a:before {
+        content:"\f196";
+        font-family:fontello;
+    }
+	
+	input[type="checkbox"] {
+        display:none;
+    }
+	
+    input[type="checkbox"]:checked~ul {
+        display:none;
+    }
+    
+	.btn img{
+		position:relative;
+		float:right;
+		cursor:pointer;
+		bottom:950px;
+	}
+
+	.done {
+		border:1px solid #ddd;
+		background:white;
+		width:30px;
+		height:50px;
+		position:relative;
+		float:right;
+		bottom:950px;
+		cursor:pointer;
+		display:none
+	}
+
+	.table3 {
+		width:100%;
+		height:600px;
+		border-collapse:collapse;
+		border:3px solid rgb(73,73,73);
+	}
+	
+	.table3 tr th {
+		height:15px;
+		background-color:gray;
+		color:white;
+	}
+	
+	.table3 tr th:nth-child(1) {
+		text-align:left;
+		border-right:none;
+	}
+	
+	.table3 tr th:nth-child(2) {
+		text-align:right;
+		border-left:none;
+	}
+	
+	.table3 tr td {
+		padding-left:10px;
+	}
+	
+	.table3_last {
+		height:35px;
+		border-top:3px solid rgb(73,73,73);
+		text-align:right;
+		font-weight:bold;
+	}
+
+	.table3_last a {
+		padding-right:13px;
+	}
+	
+	.table3 tr.search_tr td {
+		border:none;
+		padding:0px;
+	}
+/*역경매 게시판 css*/
+
+/*auction_board, auction_board_list*/
+
+div.auction_content /*board 공통 div*/
+{
+	width:100%;
+	margin:auto;
+	background-color:white;
+}
+section.auction_style /*board 공통 section*/
+{
+	width:1080px;
+	margin:auto;
+	text-align:center;
+}
+h1.auction_title /*board 공통 제목*/
+{
+	margin:auto;
+	text-align:center;
+	color:white;
+	margin-bottom:30px;
+	font-size:26px;
+	letter-spacing:8px;
+}
+div.auction_content section.auction_style table.auction_table_list
+/*=auction_board_list.jsp, admin_member_list.jsp*/
+{
+	width:980px;
+	margin:auto;
+	font-size:14px;
+	border-collapse: collapse;
+    width: 100%;
+}
+div.auction_content section.auction_style table tr td a {/*board 공통 a 태그 css*/
+	text-decoration:none;
+	color:rgb(63,63,61);
+	font-weight:bold;
+}
+
+/*페이징*/
+div.auction_content section.auction_style table tr td.num
+{
+	width:880px;
+	margin:auto;
+	text-align:center;
+	border:none;
+}
+div.auction_content section.auction_style table tr td.num li
+{
+	display:inline;
+}
+div.auction_content section.auction_style table tr td.num li a {  
+      
+    padding:4px;  
+    margin-right:3px;  
+    width:15px;  
+    color:#000;  
+    font:bold 12px tahoma;
+    border:1px solid #eee;  
+    text-align:center;  
+    text-decoration:none;
+}  
+div.auction_content section.auction_style table tr td.num li a:hover, 
+div.auction_content section.auction_style table tr td.num li a:focus {  
+    color:#fff;  
+    border:1px solid black;  
+    background-color:black;  
+}
+/*페이징 끝*/
+
+table.auction_table_list th.nth1 {
+    width:100px;
+}
+table.auction_table_list th.nth2 {
+    width:100px;
+}
+table.auction_table_list th.nth4 {
+    width:500px;
+}
+table.auction_table_list th.nth6 {
+    width:70px;
+}
+table.auction_table_list td {
+    padding: 10px;
+    text-align:left;
+    border-bottom: 1px solid #ddd;
+}
+/*table.auction_table_list tr:nth-child(12) {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 3px solid #ddd;
+}*/
+table.auction_table_list th {
+    padding: 10px;
+    text-align: left;
+    border-top: 3px solid rgb(116,69,23);
+    border-bottom: 3px solid rgb(116,69,23);
+}
+table.auction_table_list tr td a button {
+    margin-left:-10px;
+}
+
+/*검색창 css*/
+div.searchDiv {
+	height:40px;
+	width:300px;
+	border:1px solid rgb(116,69,23);
+	background: #ffffff;
+	margin:auto;
+}
+input.searchInput {
+	font-size:16px;
+	width:325;
+	padding:10px;
+	border:0px;
+	outline:none;
+	float:left;
+}
+button.searchButton {
+	width:50px;
+	height:100%;
+	border:0px;
+	background:rgb(116,69,23);
+	outline:none;
+	float:right;
+	color:#ffffff;
+}
+.searchCategory {
+	height:22px;
+}
+.searchArea {
+	height:22px;
+}
+/*검색창 css 끝*/
+
+/*auction_board_write*/
+
+table.auction_table_write {
+	width:580px;
+	margin:auto;
+	font-size:14px;
+}
+table.auction_table_write tr td {
+	text-align:left;
+	padding:5px 0px 5px 0px;
+}
+table.auction_table_write tr td:nth-child(1) {
+	width:12%;
+	padding:5px;
+	font:bold 12px tahoma;
+}
+table.auction_table_write tr td:nth-child(2) input.abw_title, table.auction_table_write tr td:nth-child(2) textarea
+{
+	width:100%;
+}
+table.auction_table_write tr td:nth-child(2) input.abw_name
+{
+	width:20%;
+}
+table.auction_table_write tr td.abw_success {
+	border-top: 1px solid #ddd;
+	text-align:center;
+	padding:30px;
+}
+table.auction_table_write tr th {
+    padding: 10px;
+    text-align: left;
+    border-top: 3px solid rgb(116,69,23);
+}
+
+/*auction_board_content*/
+
+table.auction_table_content {
+	width:680px;
+	margin:auto;
+	font-size:14px;
+	text-align:left;
+}
+
+table.auction_table_content tr th.abc_title {
+	width:440px;
+	font-size:17px;
+}
+table.auction_table_content tr th.abc_hits,
+table.auction_table_content tr td.abc_edate {
+	text-align:right;
+	font-size:12px;
+	
+}
+table.auction_table_content tr th,  
+table.auction_table_content tr td {
+	padding:10px;
+}
+table.auction_table_content tr td li {
+	padding:3px;
+}
+table.auction_table_content tr td.abc_content {
+	padding:50px 10px 50px 10px;
+	border-bottom:1px dotted #ddd;
+}
+table.auction_table_content tr th {
+	border-bottom:1px dotted #ddd;
+}
+table.auction_table_content tr td.abc_comment_count li {
+	display:inline;
+	border-right:1px solid #ddd;
+	padding:0px 10px 0px 10px;
+	font-size:12px;
+}
+table.auction_table_content tr td.abc_comment_count li:nth-child(2) {
+	border-right:none;
+}
+div.auction_comment {
+	width:690px;
+	margin:auto;
+	background-color:rgb(235,235,235);
+}
+table.auction_table_content tr td li, div.auction_comment li {
+	list-style:none;
+}
+table.auction_table_content tr td li.abc_date, div.auction_comment li span.date {
+	font-size:11px; color:#ccc;
+}
+div.auction_comment li span.comment {
+	font-size:12px;
+}
+div.auction_comment table tr td.abc_comment_contents {
+	border-bottom:1px dotted black;
+	
+}
+.imgs {
+	position:relative;
+	top:-3px;
+}
+
+/*auction_win*/
+
+div.auction_content2 /*board 공통 div*/
+{
+	width:100%;
+	margin:auto;
+	background-color:white;
+}
+section.auction_style2 /*board 공통 section*/
+{
+	width:980px;
+	margin:auto;
+	text-align:center;
+}
+h1.auction_title2 /*board 공통 제목*/
+{
+	margin:auto;
+	text-align:center;
+	color:white;
+	margin-bottom:30px;
+	font-size:26px;
+	letter-spacing:8px;
+}
+div.auction_content2 section.auction_style2 table.auction_table_list
+
+/*=auction_board_list.jsp, admin_member_list.jsp*/
+{
+	width:980px;
+	margin:auto;
+	font-size:14px;
+	border-collapse: collapse;
+    width: 100%;
+}
+div.auction_content2 section.auction_style2 table.auction_table_list tr td a {/*board 공통 a 태그 css*/
+	text-decoration:none;
+	color:rgb(63,63,61);
+	font-weight:bold;
+}
+
+table.auction_table_list tr.win th:nth-child(2), 
+table.auction_table_list tr.win th:nth-child(6), 
+table.auction_table_list tr.win th:nth-child(7) {
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-wrap:normal;
+	overflow:hidden;
+}
+table.auction_table_list tr td {
+	table-layout:fixed;
+	word-break:break-all;
+	white-space:nowrap;
+	
+}
+table.auction_table_list tr td.info,
+table.auction_table_list tr td:nth-child(7) {
+	text-align:center;
+}
+table.auction_table_list tr td a div.ellipsis {
+	
+	white-space: nowrap; 
+    width: 250px; 
+    /*border: 1px solid #000000;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+	
+}
+
+/*auction_admin*/
+
+table.auction_table_list tr.nth th {
+	width:200px;
+}
+
+
+ /* Login page*/
+   body div.logincontent {
+   		width:980px;
+   		height:500px;
+   		margin:auto;
+   		padding:0px 0px 50px 0px;
+   		
+   }
+   
+   body div.logincontent h1{
+   		text-align:center;
+   }
+   
+   body div.logincontent h3{
+   		text-align:center;
+   		font-size:12px;
+   }
+   
+   body div.logincontent form {
+   		width:80%;
+   		margin:auto;	
+   }
+   body div.logincontent ul{
+   		padding:20px 0px 20px 0px;
+   		width:70%;
+   		margin:auto;
+
+   }
+   
+   
+   body div.logincontent li{
+   		list-style:none;
+   }
+   
+
+   body div.logincontent form label.login-label1{
+   		padding:0px 0px 10px 0px;
+   		width:75%;
+   		margin:auto;
+   		font-size:12px;
+   		display:block;
+   			
+   }
+   body div.logincontent form label.login-label2{
+   		padding:0px 0px 0px 360px;
+   		font-size:12px;
+   		width:44%;
+   		margin:auto;
+   		
+   }
+   
+   body div.logincontent form input{
+   		width:70%;
+   		padding:10px;
+   		text-align:center;
+   		margin:auto;
+   		display:block;
+   }
+   
+   body div.logincontent form button{
+   		width:74%;
+   		height:45px;
+   		padding:10px;
+   		font-size:11px;
+   		display:block;
+   		margin:auto;
+   		color:white;
+   		background-color:black;
+   }
+   
+   body br.joinBr{
+   		border:1px solid black;
+   }
+   
+   /*joinselect 페이지*/
+   
+   body div.selectForm{
+   		width:100%;
+   		height:550px;
+   		margin:50px 0px 50px 0px;
+   		padding:0px 0px 50px 0px;
+   		border-top:1px solid black;
+   		border-bottom:1px solid black;
+   }
+   
+   body div.selectForm h1.h1-1{
+   		text-align:center;
+   		padding:100px 0px 0px 0px;
+   }
+   body div.selectForm h1.h1-2{
+   		text-align:center;
+   		padding:0px 0px 100px 0px;
+   } 
+   body div.selectForm button{
+   		font-weight:bold;
+   		background-color:black;
+   		color:white;
+   		font-size:20px;
+   }
+   body div.selectForm div.butt{
+   		margin:auto;
+   		text-align:center;
+   		padding:0px 35px 0px 0px;
+   }
+   
+   body div.selectForm form li{
+   		list-style:none;
+   }
+   
+   body div.selectForm form li button{
+   		width:250px;
+   		height:70px;
+   }
+   /*이용약관 페이지*/
+   body div.join_process{
+   		text-align:center;
+   		font-size:12px;
+   		font-weight:bold;
+   		color:rgb(221,221,221);
+   }
+   body div.join_process a.join_tag{
+   		color:black;
+   }
+   body div.layerForm div.access1{
+   		font-weight:bold;
+   }
+   body div.layerForm div.check1 {
+   		width:10%;
+   		position:relative;
+   		left:290px;
+   		bottom:75px;
+   		
+   }
+   body div.layerForm div.check2 {
+   		width:10%;
+   		position:relative;
+   		left:290px;
+   		bottom:35px;
+   		
+   }
+   body div.layerForm div.check1 input.checkbox,
+   body div.layerForm div.check2 input.checkbox {
+   
+   		background-color:white;
+   		position:absolute;
+   		height:30px;
+   		width:30px;
+   		background-color: #eee;
+   
+   }
+   body div.layerForm div.fname{
+   	  background:url("../images/layerlogo.png") no-repeat;
+   	  position:relative;
+   	  width:80px;
+   	  height:80px;
+   	  bottom:20px;
+   	  overflow:hidden;
+   }
+   body div.layerForm div.fname input.fname{
+   	  
+   }
+   body div.layerForm div.check1 label.container,
+   body div.layerForm div.check2 label.container{
+	  display: block;
+	  position: relative;
+	  margin-bottom: 12px;
+	  cursor: pointer;
+	  font-size: 22px;
+   }
+   body div.layerForm div.check1 label.container input,
+   body div.layerForm div.check2 label.container input {
+	  position: absolute;
+	  opacity: 0;
+	  cursor: pointer;
+	}
+	body div.layerForm div.check1 label.container span.checkmark,
+	body div.layerForm div.check2 label.container span.checkmark {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 25px;
+	  width: 25px;
+	  background-color: #eee;
+	  -webkit-user-select: none;
+  		-moz-user-select: none;
+  		-ms-user-select: none;
+  		user-select: none;
+	}
+	body div.layerForm div.check1 label.container:hover input ~ .checkmark,
+	body div.layerForm div.check2 label.container:hover input ~ .checkmark{
+		background-color: #ccc;
+	}
+	body div.layerForm div.check1 label.container input:checked ~ .checkmark,
+	body div.layerForm div.check2 label.container input:checked ~ .checkmark{
+		background-color:black;
+	}
+    body div.layerForm div.check1 label.container input ~ .checkmark:after
+    ,body div.layerForm div.check2 label.container input ~ .checkmark:after{
+    	content:"";
+    	position: absolute;
+    	diplay:none;
+    }
+    body div.layerForm div.check1 label.container input:checked ~ .checkmark:after,
+    body div.layerForm div.check2 label.container input:checked ~ .checkmark:after{
+    	display:block;
+    }
+    body div.layerForm div.check1 label.container input ~ .checkmark:after,
+    body div.layerForm div.check2 label.container input ~ .checkmark:after{
+    	left: 9px;
+		  top: 5px;
+		  width: 5px;
+		  height: 10px;
+		  border: solid white;
+		  border-width: 0 3px 3px 0;
+		  -webkit-transform: rotate(45deg);
+		  -ms-transform: rotate(45deg);
+		  transform: rotate(45deg);
+    }
+    body div.layerForm div.Ex1{
+    	height:100px;
+    	background: rgb(240,240,240);
+    	overflow-x:hidden;
+    	over-flow-y:scroll;
+    	font-weight:none;
+    	font-size:12px;
+    	color:#ccc;
+    }
+    
+   /*회원정보 입력 페이지*/
+   
+   body div.normalForm, body div.layerForm{
+   		width:18%;
+   		border:1px solid black;
+   		margin:auto;
+   }
+   
+   body h4{
+   		width:94%;
+   		margin:auto;
+   		padding:20px 0px 20px 20px; 
+   		background-color: black;
+   		color:white;
+   }
+   
+   body div.normalForm label, body div.layerForm label{
+   		font-size:12px;
+   		font-weight:bold;
+   }
+   
+   body div.normalForm ul li select, 
+   body div.layerForm ul li select{
+   		font-size:12px;
+   		font-weight:bold;
+   }
+   
+   body div.normalForm li, body div.layerForm li{
+   		list-style:none;
+   }
+   body div.normalForm ul, body div.layerForm ul{
+
+   		padding:0px 5px 0px 10px;
+   }
+   
+   body h1.joinPage{
+   		text-align:center;
+   }
+   body div.normalForm li input, body div.layerForm li input{
+   		width:90%;
+   		border-bottom:1px solid rgb(221,221,221);
+   		border-top:5px solid white;
+   		border-left:1px solid white;
+   		border-right:1px solid white;
+   }
+   
+   body div.normalForm li input.phone, body div.layerForm li input.phone{
+   		width:28%;
+   		border-bottom:1px solid rgb(221,221,221);
+   		border-top:5px solid white;
+   		border-left:1px solid white;
+   		border-right:1px solid white;
+   }
+   body div.normalForm li button, body div.layerForm li button{
+   		width:85%;
+   		margin:0px 0px 0px 20px;
+   		background-color:black;
+   		height:40px;
+   		font-weight:bold;
+   		color:white;
+   }
+   body div.normalForm li select, body div.layerForm li select{
+   		width:30%;
+   		border-bottom:1px solid rgb(221,221,221);
+   		border-top:5px solid white;
+   		border-left:1px solid white;
+   		border-right:1px solid white;
+   }
+   
+   body div.normalForm li.note, body div.layerForm li.note{
+   		font-size:12px;
+   		color:rgb(221,221,221);
+   		font-weight:bold;
+   }
+	body div.layerForm li img{
+		margin:0px 50px 0px 0px;
+	}
+	
+	/*회원가잆 성공 페이지*/
+	body div.join_success{
+		width:90%;
+		margin:auto;
+		height:500px;
+		background-color:rgb(241,241,241);
+		text-align:center;
+	}
+	
+	/*공지사항 페이지*/
+	body div.notice{
+		text-align:center;
+		margin:auto;
+	}
+	body div.notice table{
+		width:59.8%;
+		border-collapse:collapse;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	body div.notice th,tr{
+		border-bottom:2px solid rgb(221,221,221);
+	}
+	body div.notice th, body div.notice td{
+		padding:8px;
+	}
+	body div.notice th{
+		width:100px;
+	}
+	
+	body div.notice tr.theme{
+		font-weight:bold;
+	}
+	body div.notice th.subject{
+		width:800px;
+	}
+	body div.notice_menu{
+		text-align:center;
+		height:100px;
+		margin-top:10px;
+	}
+	body div.notice_menu button.noticebt1,
+	body div.notice_menu button.noticebt2{
+		width:29.8%;
+		height:100%;
+		font-size:1.6em;
+		font-weight:bold;
+		background-color:white;
+		cursor:pointer;
+	}
+	body div.notice_menu button.noticebt1{
+		border-top:3px solid black;
+   		border-left:3px solid black;
+   		border-right:3px solid black;
+   		border-bottom:1px solid white;
+	}
+
+	

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="lawtion.dao.ReviewBoardDAO">
+	<insert id="getReviewInsertResult">
+		INSERT INTO LAWTION_REVIEW_BOARD VALUES(SEQU_LAWTION_REVIEW_BOARD.NEXTVAL,#{title},#{category},SYSDATE,0,#{lawyer},#{lawsuit},#{content},#{fname},#{rfname})
+	</insert>
+	<select id="getAllResultList" resultType="lawtion.vo.ReviewBoardVO">
+		SELECT ROWNUM AS RNO, NO, TITLE, RDATE, HITS FROM (SELECT ROWNUM AS RNO, NO, TITLE, TO_CHAR(RDATE,'YYYY-MM-DD') AS RDATE, HITS FROM (SELECT * FROM LAWTION_REVIEW_BOARD ORDER BY RDATE DESC)) WHERE RNO BETWEEN #{param1} AND #{param2}
+	</select>
+	<select id="getAllBestResultList" resultType="lawtion.vo.ReviewBoardVO">
+		SELECT ROWNUM AS RNO, NO, TITLE, TO_CHAR(RDATE,'YYYY-MM-DD'), HITS FROM (SELECT * FROM LAWTION_REVIEW_BOARD ORDER BY HITS DESC) WHERE <![CDATA[ROWNUM <= 5]]> 
+	</select>
+	<select id="getActionResultList" resultType="lawtion.vo.ReviewBoardVO">
+		SELECT ROWNUM AS RNO, NO, TITLE, RDATE, HITS FROM (SELECT ROWNUM AS RNO, NO, TITLE, TO_CHAR(RDATE, 'YYYY-MM-DD')AS RDATE, HITS FROM(SELECT * FROM LAWTION_REVIEW_BOARD WHERE CATEGORY='역경매 후기') ORDER BY RDATE DESC) WHERE RNO BETWEEN #{param1} AND #{param2}
+	</select>
+	<select id="getActionBestResultList" resultType="lawtion.vo.ReviewBoardVO">
+		SELECT ROWNUM AS RNO, NO, TITLE, TO_CHAR(RDATE,'YYYY-MM-DD'), HITS FROM (SELECT * FROM(SELECT * FROM LAWTION_REVIEW_BOARD WHERE CATEGORY='역경매 후기') ORDER BY HITS DESC) WHERE <![CDATA[ROWNUM <= 5]]> 
+	</select>
+	<select id="getLawtionResultList" resultType="lawtion.vo.ReviewBoardVO">
+		SELECT ROWNUM AS RNO, NO, TITLE, RDATE, HITS FROM (SELECT ROWNUM AS RNO, NO, TITLE, TO_CHAR(RDATE, 'YYYY-MM-DD')AS RDATE, HITS FROM(SELECT * FROM LAWTION_REVIEW_BOARD WHERE CATEGORY='Lawtion 후기') ORDER BY RDATE DESC) WHERE RNO BETWEEN #{param1} AND #{param2}
+	</select>
+	<select id="getLawtionBestResultList" resultType="lawtion.vo.ReviewBoardVO">
+		SELECT ROWNUM AS RNO, NO, TITLE, TO_CHAR(RDATE,'YYYY-MM-DD'), HITS FROM (SELECT * FROM(SELECT * FROM LAWTION_REVIEW_BOARD WHERE CATEGORY='Lawtion 후기') ORDER BY HITS DESC) WHERE <![CDATA[ROWNUM <= 5]]> 
+	</select>
+	<select id ="getResultVO" resultType="lawtion.vo.ReviewBoardVO">
+		SELECT NO,TITLE, CONTENT, FNAME, RFNAME, CATEGORY, LAWYER, LAWSUIT,TO_CHAR(RDATE,'YYYY-MM-DD'),HITS FROM LAWTION_REVIEW_BOARD WHERE NO=#{no}
+	</select>
+	<update id="getUpdateHits">
+		UPDATE LAWTION_REVIEW_BOARD SET HITS = HITS+1 WHERE NO=#{no}
+	</update>
+	<update id="getUpdateResult">
+		UPDATE LAWTION_REVIEW_BOARD SET TITLE=#{title},CATEGORY=#{category},LAWYER=#{lawyer},LAWSUIT=#{lawsuit},CONTENT=#{content},FNAME=#{fname} WHERE NO=#{no}
+	</update>
+	<delete id="getDeleteResult">
+		DELETE FROM LAWTION_REVIEW_BOARD WHERE NO=#{no}
+	</delete>
+	<select id="execTotalCount" resultType="int">
+		SELECT COUNT(*) FROM LAWTION_REVIEW_BOARD
+	</select>
+	<insert id="getReveiwReplyInsert">
+		insert into LAWTION_REVIEW_REPLY VALUES(SEQU_LAWTION_REVIEW_REPLY.nextval,#{param1},#{param2},SYSDATE,#{param3})
+	</insert>
+	<delete id="getReviewReplyDelete">
+		DELETE FROM LAWTION_REVIEW_REPLY WHERE RID=#{rid}
+	</delete>
+	<select id="getReplyList" resultType="lawtion.vo.ReviewReplyVO">
+		SELECT RID,REPLYER,CONTENT, TO_CHAR(RDATE,'YYYY-MM-DD') AS RDATE,REVIEWID FROM LAWTION_REVIEW_REPLY WHERE REVIEWID=#{no}
+	</select>
+	<select id="getPrePage" resultType="lawtion.vo.ReviewReplyVO">
+		SELECT * FROM (SELECT NO,TITLE,TDATE ,HITS,CONTENT,FNAME,LAG(NO,1,0) OVER (ORDER BY NO) AS PRE_SEQ,LAG(TITLE,1,'이전글없음') OVER (ORDER BY NO) AS PRE_TITLE ,LAG(TO_CHAR(TDATE,'YYYY-MM-DD')) OVER (ORDER BY NO) AS PRE_TDATE ,LAG(HITS,1,0) OVER (ORDER BY NO) AS PRE_HITS ,LAG(CONTENT,1,'이전글없음') OVER (ORDER BY NO) AS PRE_CONTENT ,LAG(FNAME,1,'이전글없음') OVER (ORDER BY NO) AS PRE_FNAME FROM LAWTION_REVIEW_BOARD) WHERE NO = #{no}
+	</select>
+	<select id="getNextPage" resultType="lawtion.vo.ReviewReplyVO">
+		SELECT * FROM (SELECT NO,TITLE,TDATE ,HITS,CONTENT,FNAME ,LEAD(NO,1,0) OVER (ORDER BY NO) AS NEXT_SEQ ,LEAD(TITLE,1,'이후글없음') OVER (ORDER BY NO) AS NEXT_TITLE ,LAG(TO_CHAR(TDATE,'YYYY-MM-DD')) OVER (ORDER BY NO) AS NEXT_TDATE ,LEAD(HITS,1,0) OVER (ORDER BY NO) AS NEXT_HITS ,LEAD(CONTENT,1,'이후글없음') OVER (ORDER BY NO) AS NEXT_CONTENT ,LEAD(FNAME,1,'이후글없음') OVER (ORDER BY NO) AS NEXT_FNAME ,LEAD(RFNAME,1,'이후글없음') OVER (ORDER BY NO) AS NEXT_RFNAME FROM LAWTION_REVIEW_BOARD) WHERE NO = #{no}
+	</select>
+	<select id="getIndexReviewList" resultType="lawtion.vo.ReviewReplyVO">
+		SELECT ROWNUM AS RNO, NO, TITLE, CATEGORY, TO_CHAR(RDATE,'YYYY-MM-DD') FROM ( SELECT * FROM LAWTION_REVIEW_BOARD ORDER BY RDATE DESC )WHERE <![CDATA[ROWNUM <=4]]>
+	</select>
+</mapper>

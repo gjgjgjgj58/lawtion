@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="lawtion.dao.AuctionBoardDAO">
+
+	<select id="execTotalCount" resultType="int">
+		select count(*) from lawtion_auction_board where sysdate <![CDATA[<]]> edate
+	</select>
+	
+	<select id="execTotalCommentCount" resultType="int">
+		select count(*) from lawtion_auction_comment where ano=#{no}
+	</select>
+	
+	<select id="execTotalBiddingCount" resultType="int">
+		select count(*) from (select * from lawtion_auction_comment where ano=#{no}) where lawyer=2
+	</select>
+	
+	<select id="execTotalSearchCount" resultType="int">
+		SELECT count(*) FROM (SELECT * FROM lawtion_auction_board where sysdate <![CDATA[<]]> edate)
+		 where title||content like '%' || #{param1} || '%' and category like '%' || #{param2} || '%' and area like '%' || #{param3} || '%'
+	</select>
+	
+	<select id="getResultList" resultType="lawtion.vo.AuctionBoardVO">
+		select * from (select rownum as rno, no, title,
+		 adate,
+		 hits, edate, category, area
+		 from (select * from lawtion_auction_board order by adate desc) where sysdate <![CDATA[<]]> edate)
+		 where rno BETWEEN #{param1} AND #{param2}
+	</select>
+	
+	<select id="getResultSearchList" resultType="lawtion.vo.AuctionBoardVO">
+		select * from (select rownum as rno, no, title, content,
+		 adate,
+		 hits, edate, category, area from
+		 (select * from (select * from lawtion_auction_board order by adate desc) where sysdate <![CDATA[<]]> edate)
+		 where title||content like '%' || #{param3} || '%' and category like '%' || #{param4} || '%' and area like '%' || #{param5} || '%')
+		 where rno BETWEEN #{param1} AND #{param2}
+	</select>
+	
+	<insert id="getInsertResult">
+		insert into lawtion_auction_board 
+		values(sequ_lawtion_auction_board.nextval,#{title},#{content}
+				,#{fname},sysdate,0,#{category},#{edate},#{area},#{agree})
+	</insert>
+	
+	<select id="getResultVO" resultType="lawtion.vo.AuctionBoardVO">
+		select no,title,content,fname,to_char(adate,'yyyy-mm-dd hh24:mi'),hits,edate,area,category
+		 from lawtion_auction_board where no=#{no}
+	</select>
+	
+	<update id="getUpdateHits">
+		update lawtion_auction_board set hits = hits+1 where no=#{no}
+	</update>
+	
+	<insert id="getReplyInsertResult">
+		insert into lawtion_auction_comment values(sequ_lawtion_auction_comment.nextval,
+		#{content},sysdate,#{ano},#{lawyer})
+	</insert>
+	
+	<select id="getReplyList" resultType="lawtion.vo.AuctionCommentVO">
+		select cno,content,cdate,ano,lawyer from lawtion_auction_comment where ano=#{no} order by cno
+	</select>
+	
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+

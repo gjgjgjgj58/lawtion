@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="lawtion.dao.LoginDAO">
+
+	<select id="LoginResult" resultType="int">
+		select count(*) from join_normal where id=#{id} and password=#{password}
+	</select>
+	
+	<select id="LoginLayerResult" resultType="int">
+		select count(*) from join_layer where id=#{id} and password=#{password}
+	</select>
+</mapper>

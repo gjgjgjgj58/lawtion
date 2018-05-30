@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bean name="/search.do" class="gd.SearchActionController">
+    <property name="dao">
+        <ref bean="MemberDAO"/>
+    </property>
+</bean>

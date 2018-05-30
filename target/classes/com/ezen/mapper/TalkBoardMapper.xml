@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="lawtion.dao.TalkBoardDAO">
+	<insert id="getTalkInsertResult">
+		INSERT INTO LAWTION_TALK_BOARD VALUES(SEQU_LAWTION_TALK_BOARD.NEXTVAL,#{title},SYSDATE,0,#{content},#{fname},#{rfname})
+	</insert>
+	<select id="getAllResultList" resultType="lawtion.vo.TalkBoardVO">
+		SELECT ROWNUM AS RNO, NO, TITLE, TDATE, HITS FROM (SELECT ROWNUM AS RNO, NO, TITLE, TO_CHAR(TDATE,'YYYY-MM-DD') AS TDATE, HITS FROM (SELECT * FROM LAWTION_TALK_BOARD ORDER BY TDATE DESC)) WHERE ROWNUM BETWEEN #{param1} AND #{param2}			
+	</select>
+	<select id="getAllBestResultList" resultType="lawtion.vo.TalkBoardVO">
+		SELECT ROWNUM AS RNO, NO, TITLE, TO_CHAR(TDATE, 'YYYY-MM-DD') AS TDATE,HITS FROM (SELECT * FROM LAWTION_TALK_BOARD ORDER BY HITS DESC) WHERE <![CDATA[ROWNUM <= 5]]> 		
+	</select>
+	<select id="getResultVO" resultType="lawtion.vo.TalkBoardVO">
+		SELECT NO,TITLE, CONTENT, FNAME, RFNAME, TO_CHAR(TDATE,'YYYY-MM-DD') AS TDATE,HITS FROM LAWTION_TALK_BOARD WHERE NO=#{no}
+	</select>
+	<update id="getUpdateHits">
+		UPDATE LAWTION_TALK_BOARD SET HITS = HITS+1 WHERE NO=#{no}
+	</update>
+	<update id="getUpdateResult">
+		UPDATE LAWTION_TALK_BOARD SET TITLE=#{title},CONTENT=#{content},FNAME=#{fname},RFNAME=#{rfname} WHERE NO=#{no}
+	</update>
+	<delete id="getDeleteResult">
+		DELETE FROM LAWTION_TALK_BOARD WHERE NO=#{no}
+	</delete>
+	<select id="execTotalCount" resultType="int">
+		SELECT COUNT(*) FROM LAWTION_TALK_BOARD
+	</select>
+	<insert id="getTalkReplyInsert">
+		INSERT INTO LAWTION_TALK_REPLY VALUES(SEQU_LAWTION_TALK_REPLY.nextval,#{param1},#{param2},SYSDATE,#{param3})   
+	</insert>
+	<select id="getReplyList" resultType="lawtion.vo.TalkReplyVO">
+		SELECT RID,REPLYER,CONTENT, TO_CHAR(RDATE,'YYYY-MM-DD') AS RDATE,TID FROM LAWTION_TALK_REPLY WHERE TID=#{no}	
+	</select>
+	<delete id="getTalkReplyDelete">
+		DELETE FROM LAWTION_TALK_REPLY WHERE RID=#{rid}
+	</delete>
+	<select id="getPrePage" resultType="lawtion.vo.TalkBoardVO">
+		SELECT * FROM (SELECT NO,TITLE,TDATE ,HITS,CONTENT,FNAME,LAG(NO,1,0) OVER (ORDER BY NO) AS PRE_SEQ,LAG(TITLE,1,'이전글없음') OVER (ORDER BY NO) AS PRE_TITLE ,LAG(TO_CHAR(TDATE,'YYYY-MM-DD')) OVER (ORDER BY NO) AS PRE_TDATE ,LAG(HITS,1,0) OVER (ORDER BY NO) AS PRE_HITS ,LAG(CONTENT,1,'이전글없음') OVER (ORDER BY NO) AS PRE_CONTENT ,LAG(FNAME,1,'이전글없음') OVER (ORDER BY NO) AS PRE_FNAME FROM LAWTION_TALK_BOARD) WHERE NO = #{no}
+	</select>
+	<select id="getNextPage" resultType="lawtion.vo.TalkBoardVO">
+		SELECT * FROM (SELECT NO,TITLE,TDATE ,HITS,CONTENT,FNAME ,LEAD(NO,1,0) OVER (ORDER BY NO) AS NEXT_SEQ ,LEAD(TITLE,1,'이후글없음') OVER (ORDER BY NO) AS NEXT_TITLE ,LAG(TO_CHAR(TDATE,'YYYY-MM-DD')) OVER (ORDER BY NO) AS NEXT_TDATE ,LEAD(HITS,1,0) OVER (ORDER BY NO) AS NEXT_HITS ,LEAD(CONTENT,1,'이후글없음') OVER (ORDER BY NO) AS NEXT_CONTENT ,LEAD(FNAME,1,'이후글없음') OVER (ORDER BY NO) AS NEXT_FNAME FROM LAWTION_TALK_BOARD) WHERE NO = #{no}
+	</select>
+	<select id="getRfnameResult" resultType="String">
+		SELECT RFNAME FROM LAWTION_TALK_BOARD WHERE NO=#{no}
+	</select>
+	<update id="getUpdateResultNoFile">
+		UPDATE LAWTION_TALK_BOARD SET TITLE=#{title}, CONTENT=#{content} WHERE NO=#{no}
+	</update>
+</mapper>
